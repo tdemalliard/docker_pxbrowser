@@ -1,3 +1,11 @@
+# build the image
+``docker build --tag ${user}/pxbrowser .``
+
+# run a container with shell prompt
+``docker run -it --rm ${user}/pxbrowser bash -l``
+
+
+```bash
 # docker_PX-browser
 dockerfiles
 
@@ -64,5 +72,5 @@ cd /ssd/PX-browser
 /home/share/Env2.7/bin/python run.py prod
 
 #
-
+```
 
