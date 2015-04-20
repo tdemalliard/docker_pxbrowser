@@ -2,9 +2,20 @@
 ``docker build --tag ${user}/pxbrowser .``
 
 # run a container with shell prompt
-``docker run -it --rm ${user}/pxbrowser bash -l``
+``docker run -it --rm --name pxbrowser ${user}/pxbrowser bash -l``
 
 
+# run a container with shell prompt and directory mounted
+Launch the container
+``docker run -it --rm --name pxbrowser -v /ssd/data/pxbrowser:/srv/pxbrowser ${user}/pxbrowser bash -l``
+Then run the browser
+```bash
+cd /ssd/pxbrowser
+/home/share/Env2.7/bin/python run.py prod
+```
+
+
+# outdated stuff
 ```bash
 # docker_PX-browser
 dockerfiles
